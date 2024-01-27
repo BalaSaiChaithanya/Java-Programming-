@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class SingleDigitSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = scanner.nextInt();
+
+        int singleDigitSum = calculateSingleDigitSum(n);
+
+        System.out.println("Single Digit Sum: " + singleDigitSum);
+    }
+
+    private static int calculateSingleDigitSum(int num) {
+        while (num > 9) {
+            int sum = 0;
+            while (num > 0) {
+                sum += num % 10;
+                num /= 10;
+            }
+            num = sum;
+        }
+
+        return num;
+    }
+}
