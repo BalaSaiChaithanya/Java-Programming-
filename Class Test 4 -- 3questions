@@ -1,0 +1,100 @@
+Q1  Right triangle pattern::
+
+import java.util.Scanner;
+public class pattern
+{
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("enter the number:");
+		int n = scanner.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print("* ");
+		    }
+		    
+			System.out.println();
+		}
+	}
+}
+
+
+Q2..Prime and composite numbers code:::
+
+import java.util.Scanner;
+public class prime
+{
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		int arr[]={4,54,29,71,7,59,98,23};
+		int com=0,pri=0;
+		 for(int i=0;i<arr.length;i++)
+        {
+           int a=0;
+           for(int j=1;j<arr[i];j++)
+           {
+              if(arr[i]%j == 0)
+              a++;
+           }
+           if(a>1)
+		   {
+              com++;
+		   }
+		   else
+			 {
+			    pri++;
+             }
+           System.out.print("Composite number:" + com);
+		   System.out.print("prime number:" + pri);
+		   System.out.println();
+		}
+		
+	}
+}
+
+
+
+Q3. nth factor calculationcode ::::
+
+import java.util.Scanner;
+public class nthfactor{
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number:");
+		int num=sc.nextInt();
+		if(num<0){
+			System.out.println("please enter a valid number:");
+		}
+		else if(num>0){
+			 int countFactors = 0;
+            System.out.println("Factors of " + num + ":");
+            for (int i = 1; i <= num; i++) {
+                if (num % i == 0) {
+                    countFactors++;
+                    System.out.print(i + " ");
+                }
+            }
+            System.out.println("\nNumber of factors: " + countFactors);
+            System.out.println("Enter the value of n to find the nth factor:");
+            int n = sc.nextInt();
+            if (n > 0 && n <= countFactors) {
+                int factorIndex = 0;
+                for (int i = 1; i <= num; i++) {
+                    if (num % i == 0) {
+                        factorIndex++;
+                        if (factorIndex == n) {
+                            System.out.println("The " + n + "th factor is: " + i);
+                        }
+                    }
+                }
+            } else {
+                System.out.println("Invalid value of n. Please enter a valid value within the range.");
+            }
+        } else {
+            System.out.println("The number is zero, and it has infinite factors.");
+        }
+    }
+}
