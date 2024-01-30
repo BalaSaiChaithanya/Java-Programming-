@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class reverseloop
+{
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("enter a number:");
+		int n1 = scanner.nextInt();
+		int rev=0;
+        while(n1!=0)
+			{
+			  int rem=n1%10;
+              rev=rev*10+rem;
+              n1=n1/10;
+			 }
+		System.out.print(rev);
+	}
+}
