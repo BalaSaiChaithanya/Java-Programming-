@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class demoniation
+{
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("enter the 1st demonination:");
+		int n1 = scanner.nextInt();
+		System.out.print("enter the 1st demonination number of notes:");
+		int n2 = scanner.nextInt();
+		System.out.print("enter the 2nd demonination:");
+		int n3 = scanner.nextInt();
+		System.out.print("enter the 2nd demonination number of notes:");
+		int n4 = scanner.nextInt();
+		System.out.print("enter the 3rd demonination:");
+		int n5 = scanner.nextInt();
+		System.out.print("enter the 3rd demonination number of notes:");
+		int n6 = scanner.nextInt();
+		System.out.print("enter the 4th demonination:");
+		int n7 = scanner.nextInt();
+		System.out.print("enter the 4th demonination number of notes:");
+		int n8 = scanner.nextInt();
+		
+		{
+			int balance = ((n1*n2)+(n3*n4)+(n5*n6)+(n7*n8));
+		    System.out.print("Total Available balance in atm:" + balance);
+		}
+	}
+}
