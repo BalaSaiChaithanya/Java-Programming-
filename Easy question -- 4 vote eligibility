@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class vote
+{
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("enter a year:");
+		int n1 = scanner.nextInt();
+		if(n1<=18)
+		{
+			int years_left = 18-n1;
+			System.out.print("you are allowed to vote after "+years_left+ " years");
+		}
+		else{
+			System.out.print("you are eligible to vote");
+		}
+	}
+}
