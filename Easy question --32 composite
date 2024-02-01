@@ -1,0 +1,25 @@
+public class comp {
+    public static void main(String[] args) {
+        int[] elements = {16, 18, 27, 16, 23, 21, 19};
+
+        int compositeCount = 0;
+
+        for (int num : elements) {
+            if (isComposite(num)) {
+                compositeCount++;
+            }
+        }
+        System.out.println("Number of Composite Numbers = " + compositeCount);
+    }
+    private static boolean isComposite(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return true; 
+            }
+        }
+        return false;
+    }
+}
